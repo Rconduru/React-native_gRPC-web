@@ -1,0 +1,20 @@
+{
+  "name": "pom-arch-grpc",
+  "version": "1.0.0",
+  "description": "A pasta gen desse repositório deve estar no **.gitignore**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc-web": "^1.4.2"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.7.3",
+    "@protobuf-ts/plugin": "^2.8.1",
+    "protoc-gen-grpc-web": "^1.4.0"
+  }
+}

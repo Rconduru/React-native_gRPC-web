@@ -1,0 +1,22 @@
+version: v1
+managed:
+  enabled: false
+  # go_package_prefix:
+  #   default: github.com/pomwm/POC-ARCH-GRPC/gen
+plugins:
+  # - name: go
+  #   out: gen
+  #   opt:
+  #     - paths=source_relative
+  # - name: go-grpc
+  #   out: gen
+  #   opt:
+  #     - paths=source_relative
+  - name: grpc-web
+    out: gen
+    opt: import_style=typescript,mode=grpcwebtext
+    path: .\node_modules\.bin\protoc-gen-grpc-web
+  - name: ts
+    out: gen
+    opt: generate_dependencies,long_type_string
+    path: .\node_modules\.bin\protoc-gen-ts

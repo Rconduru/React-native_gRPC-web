@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package mobilePoc.alert;
+
+import "google/protobuf/empty.proto";
+
+message Notification {
+  string id = 1;
+  string summary = 2;
+  string message = 3;
+}
+
+message SendAlertRequest {
+  Notification notification = 1;
+}
+
+message SendAlertResponse {
+  string id = 1;
+}
+
+service AlertService {
+  rpc SendAlert(SendAlertRequest) returns (SendAlertResponse){}
+  rpc ListenAlert(google.protobuf.Empty) returns (stream Notification){}
+}
